@@ -265,6 +265,12 @@ export function getKernelspecMetadataFromNotebookDocumentMetadata(notebookDocume
                 language: 'PowerShell',
                 name: '.net-pwsh'
             };
+        case 'bash':
+            return {
+                display_name: '.NET (Bash)',
+                language: 'Bash',
+                name: '.net-bash'
+            };
         case 'csharp':
         default:
             return {

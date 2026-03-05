@@ -29,6 +29,7 @@
   ],
   "keywords": [
     ".NET",
+    "Bash",
     "interactive",
     "C#",
     "data science",
@@ -128,6 +129,7 @@
           "default": null,
           "description": "%description.defaultNotebookLanguage%",
           "enum": [
+            "bash",
             "csharp",
             "fsharp",
             "html",
@@ -137,6 +139,7 @@
             "pwsh"
           ],
           "enumDescriptions": [
+            "Bash",
             "C#",
             "F#",
             "HTML",

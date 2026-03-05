@@ -43,6 +43,7 @@ const magicCommandSelector: string = '#!';
 
 // grammars shipped with this extension
 const wellKnownLanguages: { languageName: string, aliases: string[] }[] = [
+    { languageName: 'bash', aliases: ['sh', 'shell'] },
     { languageName: 'kql', aliases: [] },
     { languageName: 'http', aliases: [] },
 ];

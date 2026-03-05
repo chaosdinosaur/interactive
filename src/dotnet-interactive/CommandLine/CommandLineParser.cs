@@ -125,9 +125,9 @@ public static class CommandLineParser
         }.AcceptExistingOnly();
 
         var jupyterInstallPathOption = new Option<DirectoryInfo>("--path")
-            {
-                Description = LocalizationResources.Cli_dotnet_interactive_jupyter_install_path_Description()
-            }
+        {
+            Description = LocalizationResources.Cli_dotnet_interactive_jupyter_install_path_Description()
+        }
             .AcceptExistingOnly();
 
         var defaultKernelOption = new Option<string>("--default-kernel")
@@ -135,7 +135,7 @@ public static class CommandLineParser
             Description = LocalizationResources.Cli_dotnet_interactive_jupyter_default_kernel_Description(),
             DefaultValueFactory = _ => "csharp"
         };
-        defaultKernelOption.CompletionSources.Add("fsharp", "csharp", "pwsh", "http");
+        defaultKernelOption.CompletionSources.Add("fsharp", "csharp", "pwsh", "http", "bash");
 
         var workingDirOption = new Option<DirectoryInfo>("--working-dir")
         {
@@ -179,7 +179,7 @@ public static class CommandLineParser
                 Description = LocalizationResources.Cli_dotnet_interactive_jupyter_install_http_port_range_Description()
             };
 
-            
+
             var jupyterCommand = new Command("jupyter", LocalizationResources.Cli_dotnet_interactive_jupyter_Description())
             {
                 defaultKernelOption,
@@ -203,7 +203,7 @@ public static class CommandLineParser
 
             return jupyterCommand;
 
-            async Task<int> JupyterHandler(ParseResult parseResult, CancellationToken cancellationToken) 
+            async Task<int> JupyterHandler(ParseResult parseResult, CancellationToken cancellationToken)
             {
                 var startupOptions = StartupOptions.Parse(parseResult);
                 var jupyterOptions = new JupyterOptions(parseResult.GetValue(jupyterConnectionFileArg), parseResult.GetValue(defaultKernelOption));
@@ -310,7 +310,7 @@ public static class CommandLineParser
                 previewOption,
                 workingDirOption
             };
-         
+
             stdIOCommand.SetAction(async (parseResult, cancellationToken) =>
             {
                 using var _ =

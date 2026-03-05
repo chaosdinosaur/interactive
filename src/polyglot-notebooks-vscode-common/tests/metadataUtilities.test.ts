@@ -429,6 +429,25 @@ describe(`metadata utility tests`, async () => {
         });
     });
 
+    it("kernelspec metadata can be created from notebook document metadata (Bash)", () => {
+        const notebookDocumentMetadata: metadataUtilities.NotebookDocumentMetadata =
+        {
+            kernelInfo: {
+                defaultKernelName: "bash",
+                items: [],
+            },
+        };
+        const kernelspecMetadata =
+            metadataUtilities.getKernelspecMetadataFromNotebookDocumentMetadata(
+                notebookDocumentMetadata
+            );
+        expect(kernelspecMetadata).to.deep.equal({
+            display_name: ".NET (Bash)",
+            language: "Bash",
+            name: ".net-bash",
+        });
+    });
+
     it("notebook metadata can be extracted from a composite kernel", () => {
         const kernel = new CompositeKernel("composite");
         const cs = new Kernel("csharp", "csharp");

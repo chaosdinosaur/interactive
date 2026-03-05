@@ -221,7 +221,7 @@ public class CommandLineParserTests : IDisposable
         installedKernels
             .Select(d => d.Name)
             .Should()
-            .BeEquivalentTo(".net-csharp", ".net-fsharp", ".net-powershell");
+            .BeEquivalentTo(".net-csharp", ".net-fsharp", ".net-powershell", ".net-bash");
     }
 
     [Fact]

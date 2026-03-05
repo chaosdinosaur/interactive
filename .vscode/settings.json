@@ -1,0 +1,20 @@
+{
+    "dotnet-interactive.kernelTransportArgs": [
+        "{dotnet_path}",
+        "/workspaces/interactive/artifacts/bin/dotnet-interactive/Debug/net10.0/Microsoft.DotNet.Interactive.App.dll",
+        "[vscode]",
+        "stdio",
+        "--log-path",
+        "/tmp/kernel-logs/",
+        "--verbose",
+        "--working-dir",
+        "{working_dir}"
+    ],
+    "dotnet-interactive.notebookParserArgs": [
+        "{dotnet_path}",
+        "/workspaces/interactive/artifacts/bin/dotnet-interactive/Debug/net10.0/Microsoft.DotNet.Interactive.App.dll",
+        "notebook-parser",
+        "--log-path",
+        "/tmp/parser-logs/"
+    ]
+}

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using Microsoft.DotNet.Interactive.App.CommandLine;
 using Microsoft.DotNet.Interactive.App.Connection;
+using Microsoft.DotNet.Interactive.Bash;
 using Microsoft.DotNet.Interactive.Connection;
 using Microsoft.DotNet.Interactive.CSharp;
 using Microsoft.DotNet.Interactive.Formatting;
@@ -57,6 +58,16 @@ public static class KernelBuilder
         compositeKernel.Add(
             powerShellKernel,
             ["powershell"]);
+
+        try
+        {
+            compositeKernel.UseBash();
+        }
+        catch (BashNotAvailableException)
+        {
+            // Bash is not available on this system - continue without it
+            Log.Info("Bash is not available on this system");
+        }
 
         compositeKernel.Add(
             new HtmlKernel());

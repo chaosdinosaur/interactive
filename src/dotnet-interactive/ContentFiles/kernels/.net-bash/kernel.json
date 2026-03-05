@@ -1,0 +1,15 @@
+{
+    "argv": [
+        "dotnet",
+        "interactive",
+        "jupyter",
+        "--default-kernel",
+        "bash",
+        "{connection_file}"
+    ],
+    "display_name": ".NET (Bash)",
+    "language": "bash",
+    "metadata": {
+        "polyglot_notebook": true
+    }
+}

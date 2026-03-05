@@ -16,6 +16,7 @@ https://github.com/dotnet/interactive
 	[InstallKernelSpec] Installed kernelspec .net in C:\Users\AppData\Roaming\jupyter\kernels\.net-csharp
 	[InstallKernelSpec] Installed kernelspec .net in C:\Users\AppData\Roaming\jupyter\kernels\.net-fsharp
 	[InstallKernelSpec] Installed kernelspec .net in C:\Users\AppData\Roaming\jupyter\kernels\.net-powershell
+	[InstallKernelSpec] Installed kernelspec .net in C:\Users\AppData\Roaming\jupyter\kernels\.net-bash
 	.NET kernel installation succeeded
 	```
 
@@ -25,4 +26,5 @@ https://github.com/dotnet/interactive
 	.net-csharp     C:\Users\AppData\Roaming\jupyter\kernels\.net-csharp
 	.net-fsharp     C:\Users\AppData\Roaming\jupyter\kernels\.net-fsharp
 	.net-powershell C:\Users\AppData\Roaming\jupyter\kernels\.net-powershell
+	.net-bash       C:\Users\AppData\Roaming\jupyter\kernels\.net-bash
 	```

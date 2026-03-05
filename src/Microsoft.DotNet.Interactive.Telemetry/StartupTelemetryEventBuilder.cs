@@ -251,13 +251,13 @@ public sealed class StartupTelemetryEventBuilder
 
         new CommandRule("jupyter",
             new[]{
-                Option("--default-kernel", new[]{ "csharp", "fsharp", "powershell" }, "default-kernel"),
+                Option("--default-kernel", new[]{ "csharp", "fsharp", "powershell", "bash" }, "default-kernel"),
                 Ignore(TokenType.Argument, isOptional: true) // connection file
             }),
 
         new CommandRule("stdio",
             new[]{
-                Option("--default-kernel", new[]{ "csharp", "fsharp", "powershell" }, "default-kernel")
+                Option("--default-kernel", new[]{ "csharp", "fsharp", "powershell", "bash" }, "default-kernel")
             })
     };
 

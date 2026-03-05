@@ -498,6 +498,7 @@ Console.WriteLine(3);
 
     it('code cells are appropriately classified by language', () => {
         const codeLanguages = [
+            'bash',
             'csharp',
             'fsharp',
             'html',

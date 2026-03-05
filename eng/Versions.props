@@ -15,8 +15,9 @@
     <PatchVersion>0</PatchVersion>
     <VersionPrefix>$(MajorVersion).$(MinorVersion).$(PatchVersion)</VersionPrefix>
     <AutoGenerateAssemblyVersion>true</AutoGenerateAssemblyVersion>
-    <PreReleaseVersionLabel>
-    </PreReleaseVersionLabel>
+    <PreReleaseVersionLabel>dev</PreReleaseVersionLabel>
+    <!-- Ensure local builds produce prerelease packages -->
+    <DotNetFinalVersionKind Condition="'$(DotNetFinalVersionKind)' == ''">prerelease</DotNetFinalVersionKind>
   </PropertyGroup>
   <PropertyGroup Condition="'$(UseGlobalToolVersion)' == 'true'">
     <AutoGenerateAssemblyVersion>false</AutoGenerateAssemblyVersion>

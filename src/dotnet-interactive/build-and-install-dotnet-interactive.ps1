@@ -19,7 +19,7 @@ if (Test-Path 'env:DisableArcade') {
     }
 
     $script:toolLocation = Join-Path $thisDir ".." ".." "artifacts" "packages" "Debug" "Shipping"
-    $script:toolVersion = "1.0.0-dev"
+    $script:toolVersion = "1.0.0-dev.final"
 }
 
 if (Get-Command dotnet-interactive -ErrorAction SilentlyContinue) {

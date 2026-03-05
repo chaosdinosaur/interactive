@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <NoWarn>$(NoWarn);8002;CS8002</NoWarn>
+    <NoWarn>$(NoWarn);VSTHRD200</NoWarn><!-- Ignore: Use "Async" suffix for async methods -->
+    <Deterministic Condition="'$(NCrunch)' == '1'">false</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TestResults\**" />
+    <Compile Remove="TestProjects\**" />
+    <EmbeddedResource Remove="TestResults\**" />
+    <None Remove="TestResults\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.DotNet.Interactive.Bash\Microsoft.DotNet.Interactive.Bash.csproj" />
+    <ProjectReference Include="..\Microsoft.DotNet.Interactive.Tests\Microsoft.DotNet.Interactive.Tests.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AwesomeAssertions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="xunit.runner.visualstudio">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

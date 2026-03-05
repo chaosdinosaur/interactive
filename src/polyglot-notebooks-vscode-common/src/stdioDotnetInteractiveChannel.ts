@@ -207,6 +207,9 @@ export class StdioDotnetInteractiveChannel implements DotnetInteractiveChannel {
             this.pingTimer = null;
         }
 
+        if (this.childProcess) {
+            this.childProcess.kill();
+        }
         this.childProcess = null;
     }
 }

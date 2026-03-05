@@ -7,9 +7,9 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/MLS.Agent/MLS.Agent.csproj"
+                "${workspaceFolder}/src/dotnet-interactive/dotnet-interactive.csproj"
             ],
-            "problemMatcher": "$tsc"
+            "problemMatcher": "$msCompile"
         },
         {
             "label": "publish",
@@ -17,9 +17,9 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/MLS.Agent/MLS.Agent.csproj"
+                "${workspaceFolder}/src/dotnet-interactive/dotnet-interactive.csproj"
             ],
-            "problemMatcher": "$tsc"
+            "problemMatcher": "$msCompile"
         },
         {
             "label": "watch",
@@ -28,9 +28,9 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/MLS.Agent/MLS.Agent.csproj"
+                "${workspaceFolder}/src/dotnet-interactive/dotnet-interactive.csproj"
             ],
-            "problemMatcher": "$tsc"
+            "problemMatcher": "$msCompile"
         }
     ]
 }
